@@ -14,11 +14,11 @@ https://www.youtube.com/watch?v=UdqLoqjAMY4&t=2s
 
 <img src = "readme_imgs/1.png" width = '500'>
 
-图形数据预览
+*图形数据预览*
 
 <img src = "readme_imgs/6.png" width = '300'>
 
-标签数据预览
+*标签数据预览*
 
 **预处理数据阶段**
 
@@ -32,6 +32,22 @@ https://www.youtube.com/watch?v=UdqLoqjAMY4&t=2s
 **模型建立和调试阶段**
 
 由于处理的是图片信息，我们优先考虑使用的是擅长处理图片信息的CNN模型。经过和助教的商讨，我们选择参考vgg-16模型的搭建方式，并修改部分参数使模型能够更好适应数据。在搭建完模型后由于模型庞大，训练时间约3小时，我们尝试使用GPU进行训练，但由于mac电脑的限制，GPU的使用未能成功，所以我们对模型进行进一步修改，缩短了卷积层，池化层的层数，使训练时间压缩到2小时左右，保证处理效率和修改效率。
+
+<img src = "readme_imgs/3.png" width = '800'>
+
+*vgg-16模型*
+
+<img src = "readme_imgs/2.png" width = "800">
+
+*自我修改后的vgg-16*
+
+<img src = "readme_imgs/4.png" width = "500">
+
+*vgg-16模型的结果*
+
+<img src = "readme_imgs/5.png" width = "500">
+
+*自我修改后的vgg-16模型结果*                                  
 
 根据模型输出的正确率，在正确率不理想时我们将返回模型对模型参数进行适当修改，最后我们比对了使用原vgg-16模型和修改vgg-16模型后的结果，修改后的模型准确率稍胜一筹，为66.7%。
 
